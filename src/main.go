@@ -24,7 +24,7 @@ func main() {
 	router.GET("/user/del/:id", delUser)                  // mapping '/user/del/:id' to delUser()
 
 	port := getPort()
-	log.H("Server is started on: " + port)
+	log.H("Server is started on port: " + port)
 	log.E(http.ListenAndServe(":"+port, router)) // start server and listen on 8080
 }
 
